@@ -25,7 +25,7 @@ if (isset($_GET['json']) && $_GET['json'] === 'true') {
         $fields = explode("=", $line, 2);
         $data[] = [
             $fields[0],
-            trim($fields[1], "'"),
+            trim($fields[1], '"'),
         ];
     } 
     header('Content-Type: application_json; charset=UTF-8');
